@@ -68,11 +68,11 @@ public class organizacionDialog extends java.awt.Dialog {
 
         jLabel2.setText("Comandante General");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(20, 50, 170, 16);
+        jLabel2.setBounds(20, 50, 170, 17);
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(jTextField1);
-        jTextField1.setBounds(190, 50, 150, 24);
+        jTextField1.setBounds(190, 50, 150, 34);
 
         jLabel3.setText("Jefe de estado Mayor");
         jPanel3.add(jLabel3);
@@ -85,21 +85,21 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel3.add(jTextField2);
-        jTextField2.setBounds(190, 100, 150, 24);
+        jTextField2.setBounds(190, 100, 150, 34);
 
         jLabel4.setText("Movimiento y Maniobra");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(370, 150, 140, 16);
+        jLabel4.setBounds(370, 150, 140, 17);
 
         jLabel5.setText("Comando y control");
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(20, 150, 120, 16);
+        jLabel5.setBounds(20, 150, 120, 17);
 
         jLabel6.setText("Inteligencia");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(190, 150, 80, 16);
+        jLabel6.setBounds(190, 150, 80, 17);
         jPanel3.add(jTextField3);
-        jTextField3.setBounds(370, 180, 150, 24);
+        jTextField3.setBounds(370, 180, 150, 34);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -107,9 +107,9 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel3.add(jTextField4);
-        jTextField4.setBounds(20, 180, 150, 24);
+        jTextField4.setBounds(20, 180, 150, 34);
         jPanel3.add(jTextField5);
-        jTextField5.setBounds(190, 180, 150, 24);
+        jTextField5.setBounds(190, 180, 150, 34);
 
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,23 +117,23 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel3.add(jTextField6);
-        jTextField6.setBounds(20, 250, 150, 24);
+        jTextField6.setBounds(20, 250, 150, 34);
 
         jLabel7.setText("Sostenimieto");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(20, 220, 120, 16);
+        jLabel7.setBounds(20, 220, 120, 17);
         jPanel3.add(jTextField7);
-        jTextField7.setBounds(190, 250, 150, 24);
+        jTextField7.setBounds(190, 250, 150, 34);
 
         jLabel8.setText("Protección");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(190, 220, 80, 16);
+        jLabel8.setBounds(190, 220, 80, 17);
         jPanel3.add(jTextField8);
-        jTextField8.setBounds(370, 250, 150, 24);
+        jTextField8.setBounds(370, 250, 150, 34);
 
         jLabel9.setText("Fuegos");
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(370, 220, 140, 16);
+        jLabel9.setBounds(370, 220, 140, 17);
 
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -147,7 +147,7 @@ public class organizacionDialog extends java.awt.Dialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
