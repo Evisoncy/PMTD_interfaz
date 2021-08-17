@@ -5,6 +5,7 @@
  */
 package PMTD;
 
+import PMTD.EValInicial.EvalInicial;
 import java.awt.Menu;
 
 /**
@@ -17,6 +18,7 @@ public class Etapa1 extends javax.swing.JPanel {
      * Creates new form Etapa1
      */
     public Etapa1() {
+        
         initComponents();
     }
 
@@ -154,7 +156,9 @@ public class Etapa1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        EvalInicial ei = new EvalInicial();
+        ei.setVisible(true);
+        
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
