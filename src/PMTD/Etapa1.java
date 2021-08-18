@@ -6,6 +6,7 @@
 package PMTD;
 
 import PMTD.EValInicial.EvalInicial;
+import PMTD.EValInicial.evaInicial;
 import java.awt.Menu;
 
 /**
@@ -158,7 +159,7 @@ public class Etapa1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        EvalInicial ei = new EvalInicial();
+        evaInicial ei = new evaInicial(null, true);
         ei.setVisible(true);
         
     }//GEN-LAST:event_jButton6ActionPerformed

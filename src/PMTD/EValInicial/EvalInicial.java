@@ -25,7 +25,7 @@ public class EvalInicial extends javax.swing.JFrame {
     public EvalInicial() {
         
         clips = new Environment();
-        clips.load("eleccion_Profe.CLP");
+        clips.load("recursos.CLP");
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -58,6 +58,7 @@ public class EvalInicial extends javax.swing.JFrame {
         cboHorario = new javax.swing.JComboBox<>();
         cboFaltas = new javax.swing.JComboBox<>();
         btnProcesar = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
 
         jLabel5.setText("Nivel Profesor");
 
@@ -132,21 +133,21 @@ public class EvalInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Nivel Profesor:");
+        jLabel1.setText("Recurso 1");
 
-        jLabel2.setText("Nivel Curso:");
+        jLabel2.setText("Recurso 2");
 
-        jLabel3.setText("Horario:");
+        jLabel3.setText("Recurso 3");
 
-        jLabel4.setText("Nro de faltas:");
+        jLabel4.setText("Recurso 4");
 
-        cboProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "facil", "pasable", "dificil" }));
+        cboProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
 
-        cboCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "basico", "intermedio", "avanzado" }));
+        cboCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
 
-        cboHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "manana", "tarde", "noche" }));
+        cboHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
 
-        cboFaltas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< 5", "> 5" }));
+        cboFaltas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
 
         btnProcesar.setText("Procesar");
         btnProcesar.addActionListener(new java.awt.event.ActionListener() {
@@ -155,6 +156,9 @@ public class EvalInicial extends javax.swing.JFrame {
             }
         });
 
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel9.setText("EVALUACIÓN DE RECURSOS ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,7 +166,7 @@ public class EvalInicial extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
+                        .addGap(71, 71, 71)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(jLabel3)
@@ -175,14 +179,19 @@ public class EvalInicial extends javax.swing.JFrame {
                             .addComponent(cboCurso, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cboProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(btnProcesar)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                        .addGap(143, 143, 143)
+                        .addComponent(btnProcesar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(79, 79, 79)
+                        .addComponent(jLabel9)))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(cboProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -198,9 +207,9 @@ public class EvalInicial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(cboFaltas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                .addGap(31, 31, 31)
                 .addComponent(btnProcesar)
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
 
         pack();
@@ -214,11 +223,11 @@ public class EvalInicial extends javax.swing.JFrame {
         faltas = cboFaltas.getSelectedItem().toString();
         
         hecho = "(assert" +
-        "(situacion-alumno" +
-        "(nivelProfe " + profesor + ")" +
-        "(nivelProgra " + curso +")" +
-        "(horarioDisp " + horario +")" +
-        "(maxFaltas " + faltas + ")))";
+        "(recurso-tarea" +
+        "(recurso1 " + profesor + ")" +
+        "(recurso2 " + curso +")" +
+        "(recurso3 " + horario +")" +
+        "(recurso4 " + faltas + ")))";
         
         clips.eval(hecho);
         clips.run();
@@ -284,5 +293,6 @@ public class EvalInicial extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }

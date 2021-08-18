@@ -5,6 +5,8 @@
  */
 package PMTD;
 
+import PMTD.EvalRecursos.tarea;
+
 /**
  *
  * @author argen
@@ -259,7 +261,9 @@ public class Etapa2 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        tarea t = new tarea();
+        t.setVisible(true);
+        
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
