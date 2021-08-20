@@ -146,9 +146,15 @@ public class Etapa1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        ActSitAprec asap = new ActSitAprec();
+        /*ActSitAprec asap = new ActSitAprec();
         asap.setLocationRelativeTo(null);
-        asap.setVisible(true);
+        asap.setVisible(true);*/
+        
+        //agregado al menu principal
+        ActSit actsit = new ActSit(null,true);
+        actsit.setLocationRelativeTo(null);
+        actsit.setVisible(true);
+        
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
