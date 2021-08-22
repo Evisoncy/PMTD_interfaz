@@ -16,16 +16,16 @@ import net.sf.clipsrules.jni.MultifieldValue;
  *
  * @author HOME
  */
-public class EvalInicial extends javax.swing.JFrame {
+public class EvalRiesgo extends javax.swing.JFrame {
 
     /**
-     * Creates new form EvalInicial
+     * Creates new form EvalRiesgo
      */
     Environment clips;
-    public EvalInicial() {
+    public EvalRiesgo() {
         
         clips = new Environment();
-        clips.load("recursos.CLP");
+        clips.load("cat_riesgo.CLP");
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -51,12 +51,8 @@ public class EvalInicial extends javax.swing.JFrame {
         btnProcesar1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         cboProfesor = new javax.swing.JComboBox<>();
         cboCurso = new javax.swing.JComboBox<>();
-        cboHorario = new javax.swing.JComboBox<>();
-        cboFaltas = new javax.swing.JComboBox<>();
         btnProcesar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
 
@@ -133,21 +129,23 @@ public class EvalInicial extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Recurso 1");
+        jLabel1.setText("Probabilidad");
 
-        jLabel2.setText("Recurso 2");
+        jLabel2.setText("Impacto");
 
-        jLabel3.setText("Recurso 3");
+        cboProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "frecuente", "probable", "ocasional", "rara-vez", "improbable" }));
+        cboProfesor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboProfesorActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setText("Recurso 4");
-
-        cboProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
-
-        cboCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
-
-        cboHorario.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
-
-        cboFaltas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "cero", "uno", "dos", "tres" }));
+        cboCurso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "catastrofico", "critico", "marginal", "insignificante" }));
+        cboCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cboCursoActionPerformed(evt);
+            }
+        });
 
         btnProcesar.setText("Procesar");
         btnProcesar.addActionListener(new java.awt.event.ActionListener() {
@@ -157,7 +155,7 @@ public class EvalInicial extends javax.swing.JFrame {
         });
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setText("EVALUACIÓN DE RECURSOS ");
+        jLabel9.setText("CATEGORIA DEL RIESGO");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,14 +166,10 @@ public class EvalInicial extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(71, 71, 71)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3)
                             .addComponent(jLabel2)
                             .addComponent(jLabel1))
                         .addGap(64, 64, 64)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(cboFaltas, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cboHorario, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cboCurso, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(cboProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
@@ -184,7 +178,7 @@ public class EvalInicial extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addComponent(jLabel9)))
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -199,17 +193,9 @@ public class EvalInicial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(cboCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(cboHorario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(cboFaltas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(54, 54, 54)
                 .addComponent(btnProcesar)
-                .addGap(29, 29, 29))
+                .addGap(82, 82, 82))
         );
 
         pack();
@@ -219,15 +205,16 @@ public class EvalInicial extends javax.swing.JFrame {
         String profesor, curso, horario, faltas, hecho;
         profesor = cboProfesor.getSelectedItem().toString();
         curso = cboCurso.getSelectedItem().toString();
-        horario = cboHorario.getSelectedItem().toString();
-        faltas = cboFaltas.getSelectedItem().toString();
+        /*horario = cboHorario.getSelectedItem().toString();
+        faltas = cboFaltas.getSelectedItem().toString();*/
         
         hecho = "(assert" +
-        "(recurso-tarea" +
-        "(recurso1 " + profesor + ")" +
-        "(recurso2 " + curso +")" +
-        "(recurso3 " + horario +")" +
-        "(recurso4 " + faltas + ")))";
+        "(categoria-riesgo" +
+        "(prob " + profesor + ")" +
+        "(impacto " + curso +")))"  ;
+                /*+
+       "(recurso3 " + horario +")" +
+        "(recurso4 " + faltas + ")))";*/
         
         clips.eval(hecho);
         clips.run();
@@ -241,7 +228,7 @@ public class EvalInicial extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, msj);
             clips.reset();
         } catch (Exception ex) {
-            Logger.getLogger(EvalInicial.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EvalRiesgo.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }//GEN-LAST:event_btnProcesarActionPerformed
@@ -250,6 +237,14 @@ public class EvalInicial extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnProcesar1ActionPerformed
 
+    private void cboCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboCursoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboCursoActionPerformed
+
+    private void cboProfesorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboProfesorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cboProfesorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -257,7 +252,7 @@ public class EvalInicial extends javax.swing.JFrame {
      
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EvalInicial ei = new EvalInicial();
+                EvalRiesgo ei = new EvalRiesgo();
                 ei.addWindowListener(new java.awt.event.WindowAdapter() {
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         System.exit(0);
@@ -268,7 +263,7 @@ public class EvalInicial extends javax.swing.JFrame {
         });
         /*java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EvalInicial().setVisible(true);
+                new EvalRiesgo().setVisible(true);
             }
         });*/
     }
@@ -278,8 +273,6 @@ public class EvalInicial extends javax.swing.JFrame {
     private javax.swing.JButton btnProcesar1;
     private javax.swing.JComboBox<String> cboCurso;
     private javax.swing.JComboBox<String> cboCurso1;
-    private javax.swing.JComboBox<String> cboFaltas;
-    private javax.swing.JComboBox<String> cboHorario;
     private javax.swing.JComboBox<String> cboHorario1;
     private javax.swing.JComboBox<String> cboProfesor;
     private javax.swing.JComboBox<String> cboProfesor1;
@@ -287,8 +280,6 @@ public class EvalInicial extends javax.swing.JFrame {
     private javax.swing.JDialog jDialog2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

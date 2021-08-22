@@ -5,7 +5,7 @@
  */
 package PMTD;
 
-import PMTD.EValInicial.EvalInicial;
+import PMTD.EValInicial.EvalRiesgo;
 import PMTD.EValInicial.evaInicial;
 import java.awt.Menu;
 
@@ -33,7 +33,6 @@ public class Etapa1 extends javax.swing.JPanel {
     private void initComponents() {
 
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
@@ -48,7 +47,7 @@ public class Etapa1 extends javax.swing.JPanel {
         setLayout(null);
 
         jButton1.setText("Organizar el grupo de planeamiento");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,21 +55,10 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(190, 170, 350, 25);
-
-        jButton2.setText("Establecer requerimientos para el planeamiento");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        add(jButton2);
-        jButton2.setBounds(190, 120, 350, 25);
+        jButton1.setBounds(190, 130, 350, 25);
 
         jButton3.setText("Reunir las herramientas");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,10 +66,10 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton3);
-        jButton3.setBounds(190, 220, 350, 25);
+        jButton3.setBounds(190, 180, 350, 25);
 
         jButton4.setText("Actualizar apreciaciones de situacion");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,10 +77,10 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton4);
-        jButton4.setBounds(190, 270, 350, 25);
+        jButton4.setBounds(190, 230, 350, 25);
 
         jButton5.setText("Establecer enlaces");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -100,10 +88,10 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton5);
-        jButton5.setBounds(190, 320, 350, 25);
+        jButton5.setBounds(190, 280, 350, 25);
 
         jButton6.setText("Conducir la evaluacion inicial");
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +99,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton6);
-        jButton6.setBounds(190, 370, 350, 25);
+        jButton6.setBounds(190, 330, 350, 25);
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -131,15 +119,6 @@ public class Etapa1 extends javax.swing.JPanel {
         org.setLocationRelativeTo(null);
         org.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        //Etapa1 dialo2 = new JDialog(new requerimientos(),true);
-        requerimientoDialog re2 = new requerimientoDialog(null,true);
-        re2.setLocationRelativeTo(null);
-        re2.setVisible(true);
-        
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
@@ -173,7 +152,6 @@ public class Etapa1 extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
