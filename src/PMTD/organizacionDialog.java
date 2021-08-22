@@ -37,7 +37,7 @@ public class organizacionDialog extends java.awt.Dialog {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jPanel5 = new javax.swing.JPanel();
-        jPanelCoordinacion = new javax.swing.JPanel();
+        jPanelCombate = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jTextField9 = new javax.swing.JTextField();
@@ -55,7 +55,32 @@ public class organizacionDialog extends java.awt.Dialog {
         jLabel16 = new javax.swing.JLabel();
         jTextField16 = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        jPanelFunciones = new javax.swing.JPanel();
+        apoyo = new javax.swing.JRadioButton();
+        Comunicaciones = new javax.swing.JRadioButton();
+        jRadioButton5 = new javax.swing.JRadioButton();
+        jRadioButton6 = new javax.swing.JRadioButton();
+        jRadioButton7 = new javax.swing.JRadioButton();
+        jRadioButton8 = new javax.swing.JRadioButton();
+        jRadioButton9 = new javax.swing.JRadioButton();
+        jRadioButton10 = new javax.swing.JRadioButton();
+        jRadioButton11 = new javax.swing.JRadioButton();
+        jRadioButton12 = new javax.swing.JRadioButton();
+        jRadioButton13 = new javax.swing.JRadioButton();
+        jRadioButton14 = new javax.swing.JRadioButton();
+        jRadioButton15 = new javax.swing.JRadioButton();
+        jRadioButton16 = new javax.swing.JRadioButton();
+        jRadioButton17 = new javax.swing.JRadioButton();
+        jRadioButton18 = new javax.swing.JRadioButton();
+        jRadioButton19 = new javax.swing.JRadioButton();
+        jRadioButton20 = new javax.swing.JRadioButton();
+        jRadioButton21 = new javax.swing.JRadioButton();
+        jRadioButton22 = new javax.swing.JRadioButton();
+        jRadioButton23 = new javax.swing.JRadioButton();
+        jRadioButton24 = new javax.swing.JRadioButton();
+        jRadioButton25 = new javax.swing.JRadioButton();
+        jRadioButton26 = new javax.swing.JRadioButton();
+        jRadioButton27 = new javax.swing.JRadioButton();
+        jPanelCoordinacion = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
@@ -73,6 +98,10 @@ public class organizacionDialog extends java.awt.Dialog {
         jLabel8 = new javax.swing.JLabel();
         jTextField8 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
+        jTextField17 = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jTextField18 = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
 
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
@@ -97,32 +126,32 @@ public class organizacionDialog extends java.awt.Dialog {
                 jRadioButton1ActionPerformed(evt);
             }
         });
-        jPanel4.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 10, -1, -1));
+        jPanel4.add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, -1, -1));
 
-        jRadioButton2.setText("Esado Mayor por Coordinación");
+        jRadioButton2.setText("Estado Mayor por Coordinación");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jRadioButton2ActionPerformed(evt);
             }
         });
-        jPanel4.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 10, -1, -1));
+        jPanel4.add(jRadioButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, 210, -1));
 
         jPanel5.setLayout(new java.awt.CardLayout());
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Org por funciones de Combate"), "Estado Mayor por Coordinación"));
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Org por funciones de Combate"), "Org por funciones de combate"));
         jPanel6.setLayout(null);
 
         jLabel10.setText("Comandante General");
         jPanel6.add(jLabel10);
-        jLabel10.setBounds(20, 50, 170, 16);
+        jLabel10.setBounds(20, 40, 140, 16);
 
         jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel6.add(jTextField9);
-        jTextField9.setBounds(190, 50, 150, 24);
+        jTextField9.setBounds(20, 60, 150, 24);
 
         jLabel11.setText("Jefe de estado Mayor");
         jPanel6.add(jLabel11);
-        jLabel11.setBounds(20, 100, 170, 20);
+        jLabel11.setBounds(190, 40, 130, 20);
 
         jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
@@ -131,21 +160,21 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel6.add(jTextField10);
-        jTextField10.setBounds(190, 100, 150, 24);
+        jTextField10.setBounds(190, 60, 150, 24);
 
         jLabel12.setText("Movimiento y Maniobra");
         jPanel6.add(jLabel12);
-        jLabel12.setBounds(370, 150, 140, 16);
+        jLabel12.setBounds(190, 100, 140, 16);
 
         jLabel13.setText("Comando y control");
         jPanel6.add(jLabel13);
-        jLabel13.setBounds(20, 150, 120, 16);
+        jLabel13.setBounds(20, 100, 120, 16);
 
         jLabel14.setText("Inteligencia");
         jPanel6.add(jLabel14);
-        jLabel14.setBounds(190, 150, 80, 16);
+        jLabel14.setBounds(370, 100, 80, 16);
         jPanel6.add(jTextField11);
-        jTextField11.setBounds(370, 180, 150, 24);
+        jTextField11.setBounds(370, 130, 150, 24);
 
         jTextField12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -153,9 +182,9 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel6.add(jTextField12);
-        jTextField12.setBounds(20, 180, 150, 24);
+        jTextField12.setBounds(20, 130, 150, 24);
         jPanel6.add(jTextField13);
-        jTextField13.setBounds(190, 180, 150, 24);
+        jTextField13.setBounds(190, 130, 150, 24);
 
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -163,57 +192,157 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel6.add(jTextField14);
-        jTextField14.setBounds(20, 250, 150, 24);
+        jTextField14.setBounds(20, 310, 150, 24);
 
         jLabel15.setText("Sostenimieto");
         jPanel6.add(jLabel15);
-        jLabel15.setBounds(20, 220, 120, 16);
+        jLabel15.setBounds(370, 280, 120, 16);
         jPanel6.add(jTextField15);
-        jTextField15.setBounds(190, 250, 150, 24);
+        jTextField15.setBounds(190, 310, 150, 24);
 
         jLabel16.setText("Protección");
         jPanel6.add(jLabel16);
-        jLabel16.setBounds(190, 220, 80, 16);
+        jLabel16.setBounds(190, 280, 80, 16);
         jPanel6.add(jTextField16);
-        jTextField16.setBounds(370, 250, 150, 24);
+        jTextField16.setBounds(370, 310, 150, 24);
 
         jLabel17.setText("Fuegos");
         jPanel6.add(jLabel17);
-        jLabel17.setBounds(370, 220, 140, 16);
+        jLabel17.setBounds(20, 280, 140, 16);
 
-        javax.swing.GroupLayout jPanelCoordinacionLayout = new javax.swing.GroupLayout(jPanelCoordinacion);
-        jPanelCoordinacion.setLayout(jPanelCoordinacionLayout);
-        jPanelCoordinacionLayout.setHorizontalGroup(
-            jPanelCoordinacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCoordinacionLayout.createSequentialGroup()
+        apoyo.setText("Apoyo electrónico");
+        jPanel6.add(apoyo);
+        apoyo.setBounds(20, 180, 150, 20);
+
+        Comunicaciones.setText("Comunicaciones");
+        jPanel6.add(Comunicaciones);
+        Comunicaciones.setBounds(20, 160, 150, 20);
+
+        jRadioButton5.setText("Asesor juridico oper.");
+        jPanel6.add(jRadioButton5);
+        jRadioButton5.setBounds(20, 240, 150, 20);
+
+        jRadioButton6.setText("Acción psicológica");
+        jPanel6.add(jRadioButton6);
+        jRadioButton6.setBounds(20, 200, 150, 20);
+
+        jRadioButton7.setText("Asusntos civiles");
+        jPanel6.add(jRadioButton7);
+        jRadioButton7.setBounds(20, 220, 150, 20);
+
+        jRadioButton8.setText("Ingenierpia");
+        jPanel6.add(jRadioButton8);
+        jRadioButton8.setBounds(190, 180, 150, 20);
+
+        jRadioButton9.setText("Maniobra");
+        jPanel6.add(jRadioButton9);
+        jRadioButton9.setBounds(190, 160, 150, 20);
+
+        jRadioButton10.setText("Fuerzas especiales");
+        jPanel6.add(jRadioButton10);
+        jRadioButton10.setBounds(190, 200, 150, 20);
+
+        jRadioButton11.setText("Antitanque");
+        jPanel6.add(jRadioButton11);
+        jRadioButton11.setBounds(190, 220, 150, 20);
+
+        jRadioButton12.setText("Contra Inteligencia");
+        jPanel6.add(jRadioButton12);
+        jRadioButton12.setBounds(370, 180, 150, 20);
+
+        jRadioButton13.setText("Inteligencia");
+        jPanel6.add(jRadioButton13);
+        jRadioButton13.setBounds(370, 160, 150, 20);
+
+        jRadioButton14.setText("Ataque electronico");
+        jPanel6.add(jRadioButton14);
+        jRadioButton14.setBounds(20, 360, 150, 20);
+
+        jRadioButton15.setText("Artilleria de campaña");
+        jPanel6.add(jRadioButton15);
+        jRadioButton15.setBounds(20, 340, 150, 20);
+
+        jRadioButton16.setText("Guerra psicologica");
+        jPanel6.add(jRadioButton16);
+        jRadioButton16.setBounds(20, 380, 150, 20);
+
+        jRadioButton17.setText("Ing(proteccion)");
+        jPanel6.add(jRadioButton17);
+        jRadioButton17.setBounds(190, 360, 150, 20);
+
+        jRadioButton18.setText("Artilleria anti aerea");
+        jPanel6.add(jRadioButton18);
+        jRadioButton18.setBounds(190, 340, 150, 20);
+
+        jRadioButton19.setText("Antitanque");
+        jPanel6.add(jRadioButton19);
+        jRadioButton19.setBounds(190, 440, 150, 20);
+
+        jRadioButton20.setText("Engaño militar");
+        jPanel6.add(jRadioButton20);
+        jRadioButton20.setBounds(190, 380, 150, 20);
+
+        jRadioButton21.setText("Protección electronica");
+        jPanel6.add(jRadioButton21);
+        jRadioButton21.setBounds(190, 400, 160, 20);
+
+        jRadioButton22.setText("Seg. de la información");
+        jPanel6.add(jRadioButton22);
+        jRadioButton22.setBounds(190, 420, 170, 20);
+
+        jRadioButton23.setText("Personal");
+        jPanel6.add(jRadioButton23);
+        jRadioButton23.setBounds(370, 360, 150, 20);
+
+        jRadioButton24.setText("Logistica");
+        jPanel6.add(jRadioButton24);
+        jRadioButton24.setBounds(370, 340, 150, 20);
+
+        jRadioButton25.setText("Asusntos Civiles");
+        jPanel6.add(jRadioButton25);
+        jRadioButton25.setBounds(370, 380, 150, 20);
+
+        jRadioButton26.setText("Sanidad");
+        jPanel6.add(jRadioButton26);
+        jRadioButton26.setBounds(370, 400, 150, 20);
+
+        jRadioButton27.setText("Finanzas");
+        jPanel6.add(jRadioButton27);
+        jRadioButton27.setBounds(370, 420, 150, 20);
+
+        javax.swing.GroupLayout jPanelCombateLayout = new javax.swing.GroupLayout(jPanelCombate);
+        jPanelCombate.setLayout(jPanelCombateLayout);
+        jPanelCombateLayout.setHorizontalGroup(
+            jPanelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCombateLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
-        jPanelCoordinacionLayout.setVerticalGroup(
-            jPanelCoordinacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelCoordinacionLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+        jPanelCombateLayout.setVerticalGroup(
+            jPanelCombateLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCombateLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        jPanel5.add(jPanelCoordinacion, "card2");
+        jPanel5.add(jPanelCombate, "card2");
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Org por funciones de Combate")));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder("Org por funciones de Combate"), "Estado mayor por Coordinación"));
         jPanel3.setLayout(null);
 
         jLabel2.setText("Comandante General");
         jPanel3.add(jLabel2);
-        jLabel2.setBounds(20, 50, 170, 16);
+        jLabel2.setBounds(20, 50, 120, 16);
 
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jPanel3.add(jTextField1);
-        jTextField1.setBounds(190, 50, 150, 24);
+        jTextField1.setBounds(20, 80, 150, 24);
 
         jLabel3.setText("Jefe de estado Mayor");
         jPanel3.add(jLabel3);
-        jLabel3.setBounds(20, 100, 170, 20);
+        jLabel3.setBounds(190, 50, 120, 20);
 
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
@@ -222,21 +351,21 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel3.add(jTextField2);
-        jTextField2.setBounds(190, 100, 150, 24);
+        jTextField2.setBounds(190, 80, 150, 24);
 
         jLabel4.setText("G5");
         jPanel3.add(jLabel4);
-        jLabel4.setBounds(370, 150, 140, 16);
+        jLabel4.setBounds(190, 200, 140, 16);
 
         jLabel5.setText("G3");
         jPanel3.add(jLabel5);
-        jLabel5.setBounds(20, 150, 120, 16);
+        jLabel5.setBounds(370, 140, 120, 16);
 
         jLabel6.setText("G4");
         jPanel3.add(jLabel6);
-        jLabel6.setBounds(190, 150, 80, 16);
+        jLabel6.setBounds(20, 200, 80, 16);
         jPanel3.add(jTextField3);
-        jTextField3.setBounds(370, 180, 150, 24);
+        jTextField3.setBounds(190, 220, 150, 24);
 
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -244,9 +373,9 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel3.add(jTextField4);
-        jTextField4.setBounds(20, 180, 150, 24);
+        jTextField4.setBounds(370, 160, 150, 24);
         jPanel3.add(jTextField5);
-        jTextField5.setBounds(190, 180, 150, 24);
+        jTextField5.setBounds(20, 220, 150, 24);
 
         jTextField6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -254,42 +383,60 @@ public class organizacionDialog extends java.awt.Dialog {
             }
         });
         jPanel3.add(jTextField6);
-        jTextField6.setBounds(20, 250, 150, 24);
+        jTextField6.setBounds(370, 220, 150, 24);
 
         jLabel7.setText("G6");
         jPanel3.add(jLabel7);
-        jLabel7.setBounds(20, 220, 120, 16);
+        jLabel7.setBounds(370, 200, 120, 16);
         jPanel3.add(jTextField7);
-        jTextField7.setBounds(190, 250, 150, 24);
+        jTextField7.setBounds(20, 280, 150, 24);
 
         jLabel8.setText("G7");
         jPanel3.add(jLabel8);
-        jLabel8.setBounds(190, 220, 80, 16);
+        jLabel8.setBounds(20, 260, 80, 16);
         jPanel3.add(jTextField8);
-        jTextField8.setBounds(370, 250, 150, 24);
+        jTextField8.setBounds(190, 280, 150, 24);
 
         jLabel9.setText("G8");
         jPanel3.add(jLabel9);
-        jLabel9.setBounds(370, 220, 140, 16);
+        jLabel9.setBounds(190, 260, 140, 16);
 
-        javax.swing.GroupLayout jPanelFuncionesLayout = new javax.swing.GroupLayout(jPanelFunciones);
-        jPanelFunciones.setLayout(jPanelFuncionesLayout);
-        jPanelFuncionesLayout.setHorizontalGroup(
-            jPanelFuncionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFuncionesLayout.createSequentialGroup()
+        jTextField17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField17ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(jTextField17);
+        jTextField17.setBounds(20, 160, 150, 24);
+
+        jLabel18.setText("G1");
+        jPanel3.add(jLabel18);
+        jLabel18.setBounds(20, 140, 120, 16);
+        jPanel3.add(jTextField18);
+        jTextField18.setBounds(190, 160, 150, 24);
+
+        jLabel19.setText("G2");
+        jPanel3.add(jLabel19);
+        jLabel19.setBounds(190, 140, 140, 16);
+
+        javax.swing.GroupLayout jPanelCoordinacionLayout = new javax.swing.GroupLayout(jPanelCoordinacion);
+        jPanelCoordinacion.setLayout(jPanelCoordinacionLayout);
+        jPanelCoordinacionLayout.setHorizontalGroup(
+            jPanelCoordinacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCoordinacionLayout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 546, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
-        jPanelFuncionesLayout.setVerticalGroup(
-            jPanelFuncionesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFuncionesLayout.createSequentialGroup()
+        jPanelCoordinacionLayout.setVerticalGroup(
+            jPanelCoordinacionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelCoordinacionLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 297, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
-        jPanel5.add(jPanelFunciones, "card3");
+        jPanel5.add(jPanelCoordinacion, "card3");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -299,21 +446,20 @@ public class organizacionDialog extends java.awt.Dialog {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(5, 5, 5)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 343, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -361,7 +507,7 @@ public class organizacionDialog extends java.awt.Dialog {
         // TODO add your handling code here:
         ((CardLayout) jPanel5.getLayout()).show(jPanel5, "Org por funciones de Combate");
         jPanel5.removeAll();
-        jPanel5.add(jPanelFunciones);
+        jPanel5.add(jPanelCombate);
         jPanel5.repaint();
         jPanel5.revalidate();
 
@@ -373,7 +519,7 @@ public class organizacionDialog extends java.awt.Dialog {
 
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
         // TODO add your handling code here:
-        ((CardLayout) jPanel5.getLayout()).show(jPanel5, "Esado Mayor por Coordinación");
+        ((CardLayout) jPanel5.getLayout()).show(jPanel5, "Estado Mayor por Coordinación");
         jPanel5.removeAll();
         jPanel5.add(jPanelCoordinacion);
         jPanel5.repaint();
@@ -383,6 +529,10 @@ public class organizacionDialog extends java.awt.Dialog {
             jRadioButton1.setSelected(false);
         }
     }//GEN-LAST:event_jRadioButton2ActionPerformed
+
+    private void jTextField17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField17ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -403,6 +553,8 @@ public class organizacionDialog extends java.awt.Dialog {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton Comunicaciones;
+    private javax.swing.JRadioButton apoyo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -412,6 +564,8 @@ public class organizacionDialog extends java.awt.Dialog {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -426,10 +580,33 @@ public class organizacionDialog extends java.awt.Dialog {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanelCombate;
     private javax.swing.JPanel jPanelCoordinacion;
-    private javax.swing.JPanel jPanelFunciones;
     private javax.swing.JRadioButton jRadioButton1;
+    private javax.swing.JRadioButton jRadioButton10;
+    private javax.swing.JRadioButton jRadioButton11;
+    private javax.swing.JRadioButton jRadioButton12;
+    private javax.swing.JRadioButton jRadioButton13;
+    private javax.swing.JRadioButton jRadioButton14;
+    private javax.swing.JRadioButton jRadioButton15;
+    private javax.swing.JRadioButton jRadioButton16;
+    private javax.swing.JRadioButton jRadioButton17;
+    private javax.swing.JRadioButton jRadioButton18;
+    private javax.swing.JRadioButton jRadioButton19;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton20;
+    private javax.swing.JRadioButton jRadioButton21;
+    private javax.swing.JRadioButton jRadioButton22;
+    private javax.swing.JRadioButton jRadioButton23;
+    private javax.swing.JRadioButton jRadioButton24;
+    private javax.swing.JRadioButton jRadioButton25;
+    private javax.swing.JRadioButton jRadioButton26;
+    private javax.swing.JRadioButton jRadioButton27;
+    private javax.swing.JRadioButton jRadioButton5;
+    private javax.swing.JRadioButton jRadioButton6;
+    private javax.swing.JRadioButton jRadioButton7;
+    private javax.swing.JRadioButton jRadioButton8;
+    private javax.swing.JRadioButton jRadioButton9;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
@@ -438,6 +615,8 @@ public class organizacionDialog extends java.awt.Dialog {
     private javax.swing.JTextField jTextField14;
     private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField16;
+    private javax.swing.JTextField jTextField17;
+    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
