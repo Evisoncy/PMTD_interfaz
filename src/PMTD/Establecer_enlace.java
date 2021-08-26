@@ -283,7 +283,8 @@ public class Establecer_enlace extends javax.swing.JFrame {
         text_telefono.setText(null);
         text_unidad.setText(null);
         jComboBox1.setSelectedIndex(0);
-        text_puesto.setText(null);
+        jComboBox2.setSelectedIndex(0);
+        
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
