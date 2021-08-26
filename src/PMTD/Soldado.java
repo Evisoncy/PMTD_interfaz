@@ -3,14 +3,16 @@ package PMTD;
 public class Soldado {
     private String nombre;
     private String telef;
+    private String tipoenlace;
+    private String unidad ; 
     private String grado;
-    private String unidad ;   
 
-    public Soldado( String nombre,String telef, String grado, String unidad) {
+    public Soldado( String nombre,String telef, String tipoenlace, String unidad, String grado) {
         this.nombre = nombre;
         this.telef = telef;
-        this.grado = grado;
+        this.tipoenlace = tipoenlace;
         this.unidad = unidad;
+        this.grado = grado;
     }
 
     public String getTelef() {
@@ -20,7 +22,7 @@ public class Soldado {
     public void setTelef(String telef) {
         this.telef = telef;
     }
-
+       
     public String getNombre() {
         return nombre;
     }
@@ -29,12 +31,12 @@ public class Soldado {
         this.nombre = nombre;
     }
 
-    public String getGrado() {
-        return grado;
+    public String getTipoenlace() {
+        return tipoenlace;
     }
 
-    public void setGrado(String grado) {
-        this.grado = grado;
+    public void setTipoenlace(String tipoenlace) {
+        this.tipoenlace = tipoenlace;
     }
 
     public String getUnidad() {
@@ -45,7 +47,13 @@ public class Soldado {
         this.unidad = unidad;
     }
 
-       
+    public String getGrado() {
+        return grado;
+    }
+
+    public void setGrado(String grado) {
+        this.grado = grado;
+    }   
 
     public static void main (String args[]){
         
