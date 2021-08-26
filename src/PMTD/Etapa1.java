@@ -39,6 +39,8 @@ public class Etapa1 extends javax.swing.JPanel {
         jButton6 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -55,7 +57,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(190, 130, 350, 25);
+        jButton1.setBounds(190, 70, 350, 25);
 
         jButton3.setText("Reunir las herramientas");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -66,7 +68,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton3);
-        jButton3.setBounds(190, 180, 350, 25);
+        jButton3.setBounds(190, 120, 350, 25);
 
         jButton4.setText("Actualizar apreciaciones de situacion");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -77,7 +79,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton4);
-        jButton4.setBounds(190, 230, 350, 25);
+        jButton4.setBounds(190, 170, 350, 25);
 
         jButton5.setText("Establecer enlaces");
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -88,7 +90,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton5);
-        jButton5.setBounds(190, 280, 350, 25);
+        jButton5.setBounds(190, 220, 350, 25);
 
         jButton6.setText("Conducir la evaluacion inicial");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -99,7 +101,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton6);
-        jButton6.setBounds(190, 330, 350, 25);
+        jButton6.setBounds(190, 270, 350, 25);
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -110,6 +112,24 @@ public class Etapa1 extends javax.swing.JPanel {
 
         add(jPanel1);
         jPanel1.setBounds(0, 0, 730, 50);
+
+        jButton2.setText("Guia de iniciación");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        add(jButton2);
+        jButton2.setBounds(190, 320, 350, 23);
+
+        jButton7.setText("Orden preparatoria N° 1");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        add(jButton7);
+        jButton7.setBounds(190, 370, 350, 23);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -149,13 +169,25 @@ public class Etapa1 extends javax.swing.JPanel {
         
     }//GEN-LAST:event_jButton6ActionPerformed
 
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       GuiaIniciacion gi = new GuiaIniciacion(null,true);
+       gi.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        Orden o = new Orden(null,true);
+        o.setVisible(true);
+    }//GEN-LAST:event_jButton7ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

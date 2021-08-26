@@ -10,6 +10,7 @@ public class Establecer_enlace extends javax.swing.JFrame {
 
     public Establecer_enlace() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     
