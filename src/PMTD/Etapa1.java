@@ -158,8 +158,7 @@ public class Etapa1 extends javax.swing.JPanel {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        Establecer_enlace Ee = new Establecer_enlace();
-        Ee.setLocationRelativeTo(null);
+        Establecer_enlace1 Ee = new Establecer_enlace1(null,true);
         Ee.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
