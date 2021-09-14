@@ -16,7 +16,7 @@ public class inicio {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Login sid =new Login();
+        Iniciar sid =new Iniciar();
         sid.setVisible(true);
     }
     

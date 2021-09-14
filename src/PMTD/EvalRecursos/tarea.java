@@ -5,7 +5,9 @@
  */
 package PMTD.EvalRecursos;
 
-import PMTD.EValInicial.EvalRiesgo;
+import PMTD.EValInicial.EvaRiesgo;
+
+
 
 /**
  *
@@ -184,7 +186,7 @@ public class tarea extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        EvalRiesgo ei = new EvalRiesgo();
+        EvaRiesgo ei = new EvaRiesgo();
         ei.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 

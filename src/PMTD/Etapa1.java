@@ -5,7 +5,7 @@
  */
 package PMTD;
 
-import PMTD.EValInicial.EvalRiesgo;
+
 import PMTD.EValInicial.evaInicial;
 import java.awt.Menu;
 
@@ -172,12 +172,12 @@ public class Etapa1 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       GuiaIniciacion gi = new GuiaIniciacion(null,true);
+       GuiaIni gi = new GuiaIni(null,true);
        gi.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Orden o = new Orden(null,true);
+        OrdenP o = new OrdenP(null,true);
         o.setVisible(true);
     }//GEN-LAST:event_jButton7ActionPerformed
 

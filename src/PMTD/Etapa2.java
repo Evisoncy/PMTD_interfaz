@@ -5,8 +5,8 @@
  */
 package PMTD;
 
-import PMTD.CRM.CRM;
-import PMTD.EValInicial.EvalRiesgo;
+import PMTD.CRM.CRM1;
+
 import PMTD.EvalRecursos.tarea;
 
 /**
@@ -283,7 +283,7 @@ public class Etapa2 extends javax.swing.JPanel {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         /*EvalRiesgo crm = new EvalRiesgo();
         crm.setVisible(true);*/
-        CRM c = new CRM(null,true);
+        CRM1 c = new CRM1(null,true);
         c.setVisible(true);
     }//GEN-LAST:event_jButton8ActionPerformed
 
