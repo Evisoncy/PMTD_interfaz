@@ -36,6 +36,9 @@ public class ActSit extends java.awt.Dialog {
         cmb.addItem("S6 - G6");
         cmb.addItem("S7 - G7");
         cmb.addItem("S8 - G8");
+        
+        txtLugar6.setText("");
+        jLabel23.setText("Fecha: Formato dd/mm/aaaa");
     }
 
     /**
@@ -120,10 +123,15 @@ public class ActSit extends java.awt.Dialog {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
+
+        jPanel12.setBackground(new java.awt.Color(102, 153, 0));
+
         jLabel19.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel19.setText("Actualizar apreciacion de situación");
         jPanel12.add(jLabel19);
 
+        jPanel13.setBackground(new java.awt.Color(102, 153, 0));
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Encabezado"));
 
         jLabel20.setText("Unidad");
@@ -133,6 +141,11 @@ public class ActSit extends java.awt.Dialog {
         jLabel22.setText("Fecha");
 
         txtLugar6.setText("Aca puede ir un DateChooser");
+        txtLugar6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtLugar6ActionPerformed(evt);
+            }
+        });
 
         jLabel23.setText("Apreciacion de situacion de ");
 
@@ -188,6 +201,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap())
         );
 
+        jPanel14.setBackground(new java.awt.Color(102, 153, 0));
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder("Area de interes"));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -250,6 +264,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel17.setBackground(new java.awt.Color(102, 153, 0));
         jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder("Características del area de operaciones"));
 
         jLabel43.setText("Condiciones metereologicas");
@@ -279,11 +294,11 @@ public class ActSit extends java.awt.Dialog {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel43)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel44))
-                .addGap(74, 74, 74)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel45)
                     .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -305,6 +320,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap())
         );
 
+        jPanel2.setBackground(new java.awt.Color(102, 153, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("c. Fuerzas enemigas"));
 
         jTextArea1.setColumns(20);
@@ -327,6 +343,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap())
         );
 
+        jPanel3.setBackground(new java.awt.Color(102, 153, 0));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("d. Fuerzas amigas"));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Recursos adicionales"));
@@ -557,6 +574,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        jPanel8.setBackground(new java.awt.Color(102, 153, 0));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("e. Consideraciones civiles"));
 
         jTextArea8.setColumns(20);
@@ -699,7 +717,7 @@ public class ActSit extends java.awt.Dialog {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         jScrollPane2.setViewportView(jPanel1);
@@ -714,8 +732,8 @@ public class ActSit extends java.awt.Dialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1692, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 1638, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -781,6 +799,10 @@ public class ActSit extends java.awt.Dialog {
 
         JOptionPane.showMessageDialog(null, "Cambios guardados");
     }//GEN-LAST:event_btnFin1ActionPerformed
+
+    private void txtLugar6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLugar6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtLugar6ActionPerformed
 
     /**
      * @param args the command line arguments
