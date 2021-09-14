@@ -26,6 +26,7 @@ public class GuiaIni extends javax.swing.JDialog {
     /**
      * Creates new form GuiaIni
      */
+    String nombre = "Guia";
     public GuiaIni(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -39,14 +40,15 @@ public class GuiaIni extends javax.swing.JDialog {
             PdfWriter.getInstance(documento, archivo);
             documento.open();
             
-            Paragraph parrafo = new Paragraph("GUIA DE INICIACIÓN");
+            Paragraph parrafo = new Paragraph("GUIA DE INICIACIÓN \n");
             parrafo.setAlignment(1);
             documento.add(parrafo);
-            
-            documento.add(new Paragraph("Coordinaciones por realizar: " + Coord.getText()));
-            documento.add(new Paragraph("Movimientos autorizados de reconocimiento y vigilancia: " + Mov.getText()));
-            documento.add(new Paragraph("Trabajos o tareas adicionales para el EM: " + Trab.getText()));
-            documento.add(new Paragraph("Requerimientos de información: " + Req.getText()));
+            String id=IniciarDiseño.getSelectedItem().toString();
+            documento.add(new Paragraph("\nIniciar el diseño: \n" + id));
+            documento.add(new Paragraph("Coordinaciones por realizar: \n" + Coord.getText()));
+            documento.add(new Paragraph("Movimientos autorizados de reconocimiento y vigilancia: \n" + Mov.getText()));
+            documento.add(new Paragraph("Trabajos o tareas adicionales para el EM: \n" + Trab.getText()));
+            documento.add(new Paragraph("Requerimientos de información: \n" + Req.getText()));
             //documento.add(new Paragraph("asdsad: " + xd))
             documento.close();
             JOptionPane.showMessageDialog(null, "El archivo pdf fue creado correctamente");
@@ -236,7 +238,7 @@ public class GuiaIni extends javax.swing.JDialog {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         try {
-            Generar(Coord.getText());
+            Generar(nombre);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(GuiaIni.class.getName()).log(Level.SEVERE, null,ex);
         } catch (DocumentException ex) {
@@ -246,7 +248,7 @@ public class GuiaIni extends javax.swing.JDialog {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         if(!Coord.getText().isEmpty())
-            abrir(Coord.getText());
+            abrir(nombre);
         else
             JOptionPane.showMessageDialog(null, "no se encuentra ese archivo con ese nombre","Atencion",2);
     }//GEN-LAST:event_jButton2ActionPerformed
