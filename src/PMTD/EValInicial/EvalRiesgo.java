@@ -16,27 +16,20 @@ import net.sf.clipsrules.jni.MultifieldValue;
  *
  * @author WIMBER
  */
-public class EvaRiesgo extends javax.swing.JDialog {
+public class EvalRiesgo extends javax.swing.JDialog {
 
     /**
-     * Creates new form EvaRiesgo
+     * Creates new form EvalRiesgo
      */
     Environment clips;
-    public EvaRiesgo(java.awt.Frame parent, boolean modal) {
+    public EvalRiesgo(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        initComponents();
         clips = new Environment();
         clips.load("cat_riesgo.CLP");
         initComponents();
         this.setLocationRelativeTo(null);
-       
     }
 
-    public EvaRiesgo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-   
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -108,14 +101,14 @@ public class EvaRiesgo extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addComponent(jLabel9)))
-                .addContainerGap(63, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(cboProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -157,15 +150,19 @@ public class EvaRiesgo extends javax.swing.JDialog {
     }//GEN-LAST:event_cboCursoActionPerformed
 
     private void btnProcesarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcesarActionPerformed
-        String prob, impacto,hecho;
-        prob = cboProfesor.getSelectedItem().toString();
-        impacto = cboCurso.getSelectedItem().toString();
-        //resultado=jTextField1.getText();
+        String profesor, curso, horario, faltas, hecho;
+        profesor = cboProfesor.getSelectedItem().toString();
+        curso = cboCurso.getSelectedItem().toString();
+        /*horario = cboHorario.getSelectedItem().toString();
+        faltas = cboFaltas.getSelectedItem().toString();*/
 
         hecho = "(assert" +
         "(categoria-riesgo" +
-        "(prob " + prob + ")" +
-        "(impacto " + impacto +")))"  ;
+        "(prob " + profesor + ")" +
+        "(impacto " + curso +")))"  ;
+        /*+
+        "(recurso3 " + horario +")" +
+        "(recurso4 " + faltas + ")))";*/
 
         clips.eval(hecho);
         clips.run();
@@ -177,10 +174,9 @@ public class EvaRiesgo extends javax.swing.JDialog {
         try {
             String msj = fv.getFactSlot("mensaje").toString();
             JOptionPane.showMessageDialog(null, msj);
-            //resultado=jTextField1.;
             clips.reset();
         } catch (Exception ex) {
-            Logger.getLogger(EvaRiesgo.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(EvalRiesgo.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_btnProcesarActionPerformed
@@ -202,20 +198,20 @@ public class EvaRiesgo extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EvaRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EvalRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EvaRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EvalRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EvaRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EvalRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EvaRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EvalRiesgo.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                EvaRiesgo dialog = new EvaRiesgo(new javax.swing.JFrame(), true);
+                EvalRiesgo dialog = new EvalRiesgo(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

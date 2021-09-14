@@ -50,199 +50,188 @@ public class Etapa2 extends javax.swing.JPanel {
         jButton17 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jLabel1.setText("jLabel1");
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createEtchedBorder());
         setPreferredSize(new java.awt.Dimension(726, 468));
-        setLayout(null);
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton2.setText("Análisis del Plan del Elón Sup.");
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.setText("ANÁLISIS DEL PLAN DEL ELON SUPERIOR");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2);
-        jButton2.setBounds(60, 70, 300, 25);
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 300, 30));
 
-        jButton1.setText("Determinación de tareas");
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setText("DETERMINACIÓN DE TAREAS");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(60, 170, 300, 25);
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 300, 30));
 
-        jButton3.setText("Evaluación de los recursos disponibles");
-        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.setText("EVALUACION DE LOS RECURSOS DISPONIBLES");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3);
-        jButton3.setBounds(60, 220, 300, 25);
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 300, 30));
 
-        jButton4.setText("Identificación de las limitaciones existentes");
-        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton4.setText("IDENTIFICACIÓN DE LIMITACIONES");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        add(jButton4);
-        jButton4.setBounds(60, 270, 300, 25);
+        add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 300, 30));
 
-        jButton5.setText("Hechos críticos y desarrollar suposiciones ");
-        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton5.setText("HECHOS CRÍTICOS Y DEARROLLO DE SUPOSICIONES");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        add(jButton5);
-        jButton5.setBounds(60, 320, 300, 25);
+        add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 300, 30));
 
-        jButton6.setText("Desarrollar de RICC iniciales ");
-        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton6.setText("DESARROLLO DE RICC INICIALES");
+        jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        add(jButton6);
-        jButton6.setBounds(60, 420, 300, 25);
+        add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 300, 30));
 
         jButton8.setText(" (CRM) ");
-        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton8ActionPerformed(evt);
             }
         });
-        add(jButton8);
-        jButton8.setBounds(60, 370, 300, 25);
+        add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 370, 300, 30));
 
-        jButton9.setText("Revisión de la situación");
-        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton9.setText("REVISIÓN DE LA SITUACIÓN");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
             }
         });
-        add(jButton9);
-        jButton9.setBounds(60, 120, 300, 25);
+        add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 300, 30));
 
-        jButton10.setText("Desarrollar la matriz de sincronización de IVR");
-        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton10.setText("DESARROLLAR LA MATRIZ DE SINCRONIZACIÓN DE IVR");
+        jButton10.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
             }
         });
-        add(jButton10);
-        jButton10.setBounds(370, 70, 300, 25);
+        add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 300, 30));
 
-        jButton11.setText("Actualización del plan de empleo del tiempo");
-        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton11.setText("ACTUALIZACIÓN DEL PLAN DE EMPLEO DE TIEMPO");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
-        add(jButton11);
-        jButton11.setBounds(370, 170, 300, 25);
+        add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 170, 300, 30));
 
         jButton12.setText("Desarrollar los temas y mensajes de información");
-        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
             }
         });
-        add(jButton12);
-        jButton12.setBounds(370, 220, 300, 25);
+        add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 300, 30));
 
         jButton13.setText("Desarrollo una propuesta del enunciado de la misión");
-        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
-        add(jButton13);
-        jButton13.setBounds(370, 270, 300, 25);
+        add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 270, 300, 30));
 
         jButton14.setText("Desarrollar la intención inicial del comandante");
-        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton14.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
             }
         });
-        add(jButton14);
-        jButton14.setBounds(370, 320, 300, 25);
+        add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, 300, 30));
 
         jButton15.setText("Conducir la evaluacion inicial");
-        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
             }
         });
-        add(jButton15);
-        jButton15.setBounds(370, 420, 300, 25);
+        add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, 300, 30));
 
         jButton16.setText("Desarrollar la guía inicial de planeamiento");
-        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton16.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
             }
         });
-        add(jButton16);
-        jButton16.setBounds(370, 370, 300, 25);
+        add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 370, 300, 30));
 
-        jButton17.setText("Formulación del Plan IVR");
-        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton17.setText("FORMULACIÓN DEL PLAN IVR");
+        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButton17.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
             }
         });
-        add(jButton17);
-        jButton17.setBounds(370, 120, 300, 25);
+        add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 120, 300, 30));
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("ANÁLISIS DE  LA MISIÓN");
         jLabel2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jPanel1.add(jLabel2, java.awt.BorderLayout.CENTER);
 
-        add(jPanel1);
-        jPanel1.setBounds(0, 0, 740, 50);
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 50));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_claro.jpg"))); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 510));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -343,6 +332,7 @@ public class Etapa2 extends javax.swing.JPanel {
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

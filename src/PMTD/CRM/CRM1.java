@@ -6,6 +6,7 @@
 package PMTD.CRM;
 
 import PMTD.EValInicial.EvaRiesgo;
+import PMTD.EValInicial.EvalRiesgo;
 
 /**
  *
@@ -205,7 +206,7 @@ public class CRM1 extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        EvaRiesgo crm = new EvaRiesgo(null,true);
+        EvalRiesgo crm = new EvalRiesgo(null,true);
         crm.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 

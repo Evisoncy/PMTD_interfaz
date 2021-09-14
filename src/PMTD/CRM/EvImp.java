@@ -193,7 +193,7 @@ public class EvImp extends javax.swing.JDialog {
 
                     JOptionPane.showMessageDialog(null,valor , "Mensaje",JOptionPane.INFORMATION_MESSAGE);
                 }else{
-                    System.exit(0);
+                    //System.exit(0);
                 }
 
             }
