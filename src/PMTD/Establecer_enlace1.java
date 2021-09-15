@@ -5,11 +5,8 @@
  */
 package PMTD;
 
-import java.awt.Dimension;
-import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
