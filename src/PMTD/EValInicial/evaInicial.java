@@ -5,7 +5,19 @@
  */
 package PMTD.EValInicial;
 
+import PMTD.GuiaIni;
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 import java.awt.CardLayout;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -16,6 +28,7 @@ public class evaInicial extends javax.swing.JDialog {
     /**
      * Creates new form evaInicial
      */
+    String nombre="EvaInicial";
     public evaInicial(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
@@ -25,6 +38,79 @@ public class evaInicial extends javax.swing.JDialog {
     
     public void seleccion() {
 
+    }
+    
+    public void Generar1(String nombre) throws FileNotFoundException, DocumentException{
+        if(!(jTextField1.getText().isEmpty() || (jTextField38.getText().isEmpty()) || (jTextField21.getText().isEmpty()))){
+            FileOutputStream archivo = new FileOutputStream(nombre + ".pdf"); 
+            Document documento = new Document();
+            PdfWriter.getInstance(documento, archivo);
+            documento.open();
+            
+            Paragraph parrafo = new Paragraph("ORDEN PREPARATORIA N°1 \n\n");
+            parrafo.setAlignment(1);
+            documento.add(parrafo);
+            
+            documento.add(new Paragraph("Planteamiento Paralelo \n" + "Regla de 1/5" + "\n"));
+            documento.add(new Paragraph("Tiempo Total Disponible \n" + jTextField38.getText() + "\n"));
+            documento.add(new Paragraph("Tiempo Asignado \n" + " Días: " + jTextField1.getText() + "\n" + " Horas: " + jTextField21.getText() + "\n"));
+            documento.add(new Paragraph("Etapas y pasos del PMTD \n"));
+            documento.add(new Paragraph("Análisis de la misión \n" + " %Planteamiento: " + jTextField2.getText() + "\n" + "Tiempo en Días: " + jTextField3.getText() + "\n" + "Tiempo en Horas: " + jTextField33.getText() + "\n"));
+            documento.add(new Paragraph("Elaboración de los cursos \n" + " %Planteamiento: " + jTextField4.getText() + "\n" + "Tiempo en Días: " + jTextField10.getText() + "\n" + "Tiempo en Horas: " + jTextField36.getText() + "\n"));
+            documento.add(new Paragraph("Análisis/Comparación \n" + " %Planteamiento: " + jTextField5.getText() + "\n" + "Tiempo en Días: " + jTextField9.getText() + "\n" + "Tiempo en Horas: " + jTextField35.getText() + "\n"));
+            documento.add(new Paragraph("Desarrollo del Plan \n" + " %Planteamiento: " + jTextField6.getText() + "\n" + "Tiempo en Días: " + jTextField8.getText() + "\n" + "Tiempo en Horas: " + jTextField34.getText() + "\n"));
+            documento.add(new Paragraph("Tiempo Total \n" + " %Planteamiento: " + jTextField7.getText() + "\n" + "Tiempo en Días: " + jTextField11.getText() + "\n" + "Tiempo en Horas: " + jTextField37.getText() + "\n"));
+            documento.add(new Paragraph("Reducit el PMTD: " + jComboBox2.getSelectedItem().toString() + "\n"));
+            documento.add(new Paragraph("Organizaciones a Integrar \n" + jTextField19.getText() + "\n"));
+            
+            //documento.add(new Paragraph("asdsad: " + xd))
+            documento.close();
+            JOptionPane.showMessageDialog(null, "El archivo pdf fue creado correctamente");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Llenar los campos");    
+        }
+    }
+    
+    public void Generar2(String nombre) throws FileNotFoundException, DocumentException{
+        if(!(jTextField32.getText().isEmpty() || (jTextField22.getText().isEmpty()) || (jTextField12.getText().isEmpty()))){
+            FileOutputStream archivo = new FileOutputStream(nombre + ".pdf"); 
+            Document documento = new Document();
+            PdfWriter.getInstance(documento, archivo);
+            documento.open();
+            
+            Paragraph parrafo = new Paragraph("ORDEN PREPARATORIA N°1 \n\n");
+            parrafo.setAlignment(1);
+            documento.add(parrafo);
+            
+            documento.add(new Paragraph("Planteamiento Secuencial \n" + "Regla de 1/3" + "\n"));
+            documento.add(new Paragraph("Tiempo Total Disponible \n" + jTextField32.getText() + "\n"));
+            documento.add(new Paragraph("Tiempo Asignado \n" + " Días: " + jTextField12.getText() + "\n" + " Horas: " + jTextField22.getText() + "\n"));
+            documento.add(new Paragraph("Etapas y pasos del PMTD \n"));
+            documento.add(new Paragraph("Análisis de la misión \n" + " %Planteamiento: " + jTextField16.getText() + "\n" + "Tiempo en Días: " + jTextField13.getText() + "\n" + "Tiempo en Horas: " + jTextField28.getText() + "\n"));
+            documento.add(new Paragraph("Elaboración de los cursos \n" + " %Planteamiento: " + jTextField15.getText() + "\n" + "Tiempo en Días: " + jTextField24.getText() + "\n" + "Tiempo en Horas: " + jTextField31.getText() + "\n"));
+            documento.add(new Paragraph("Análisis/Comparación \n" + " %Planteamiento: " + jTextField23.getText() + "\n" + "Tiempo en Días: " + jTextField26.getText() + "\n" + "Tiempo en Horas: " + jTextField30.getText() + "\n"));
+            documento.add(new Paragraph("Desarrollo del Plan \n" + " %Planteamiento: " + jTextField25.getText() + "\n" + "Tiempo en Días: " + jTextField17.getText() + "\n" + "Tiempo en Horas: " + jTextField27.getText() + "\n"));
+            documento.add(new Paragraph("Tiempo Total \n" + " %Planteamiento: " + jTextField18.getText() + "\n" + "Tiempo en Días: " + jTextField18.getText() + "\n" + "Tiempo en Horas: " + jTextField29.getText() + "\n"));
+            documento.add(new Paragraph("Reducit el PMTD: " + jComboBox1.getSelectedItem().toString() + "\n"));
+            documento.add(new Paragraph("Organizaciones a Integrar \n" + jTextField20.getText() + "\n"));
+
+            //documento.add(new Paragraph("asdsad: " + xd))
+            documento.close();
+            JOptionPane.showMessageDialog(null, "El archivo pdf fue creado correctamente");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Llenar los campos");    
+        }
+    }
+    
+    public void abrir(String nombre){
+        try {
+            File path = new File(nombre + ".pdf");
+            Desktop.getDesktop().open(path);
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, ex,"atencion",2);
+        }
     }
 
     /**
@@ -80,6 +166,7 @@ public class evaInicial extends javax.swing.JDialog {
         jLabel31 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jTextField12 = new javax.swing.JTextField();
@@ -118,6 +205,7 @@ public class evaInicial extends javax.swing.JDialog {
         jLabel29 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -227,6 +315,13 @@ public class evaInicial extends javax.swing.JDialog {
             }
         });
 
+        jButton5.setText("Abrir");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -236,28 +331,20 @@ public class evaInicial extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel1)
                                 .addGap(101, 101, 101)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(56, 56, 56)
                         .addComponent(jLabel2)
                         .addGap(245, 245, 245))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(32, 32, 32)
-                                .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -302,12 +389,17 @@ public class evaInicial extends javax.swing.JDialog {
                                     .addComponent(jButton4)
                                     .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel23)))
+                                .addComponent(jLabel23))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(jButton1)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton5))
+                                    .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(271, 271, 271)
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -339,8 +431,7 @@ public class evaInicial extends javax.swing.JDialog {
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel7)))
+                            .addComponent(jLabel7))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel6)
@@ -378,7 +469,9 @@ public class evaInicial extends javax.swing.JDialog {
                     .addComponent(jLabel21)
                     .addComponent(jTextField19, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton5))
                 .addContainerGap())
         );
 
@@ -477,6 +570,13 @@ public class evaInicial extends javax.swing.JDialog {
             }
         });
 
+        jButton6.setText("Abrir");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -488,30 +588,29 @@ public class evaInicial extends javax.swing.JDialog {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(64, 64, 64)
-                                        .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(108, 108, 108)
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(64, 64, 64)
+                                .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel15)
+                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(108, 108, 108)
+                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel15)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(56, 56, 56)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(56, 56, 56)
-                                        .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(129, 129, 129)))
-                        .addGap(165, 165, 165))
+                                        .addComponent(jButton2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jButton6))
+                                    .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(294, 294, 294))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -574,10 +673,6 @@ public class evaInicial extends javax.swing.JDialog {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel25)))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(326, 326, 326)
-                .addComponent(jButton2)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -628,8 +723,7 @@ public class evaInicial extends javax.swing.JDialog {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel12)))
+                            .addComponent(jLabel12))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -657,7 +751,9 @@ public class evaInicial extends javax.swing.JDialog {
                     .addComponent(jLabel18)
                     .addComponent(jTextField20, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton6))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -733,7 +829,13 @@ public class evaInicial extends javax.swing.JDialog {
     }//GEN-LAST:event_jTextField32ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        try {
+            Generar2(nombre);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(GuiaIni.class.getName()).log(Level.SEVERE, null,ex);
+        } catch (DocumentException ex) {
+            Logger.getLogger(GuiaIni.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jTextField24ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField24ActionPerformed
@@ -780,7 +882,13 @@ public class evaInicial extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try {
+            Generar1(nombre);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(GuiaIni.class.getName()).log(Level.SEVERE, null,ex);
+        } catch (DocumentException ex) {
+            Logger.getLogger(GuiaIni.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField38ActionPerformed
@@ -827,6 +935,20 @@ public class evaInicial extends javax.swing.JDialog {
         jTextField37.setText(diasHC);
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        if(!nombre.isEmpty())
+            abrir(nombre);
+        else
+            JOptionPane.showMessageDialog(null, "no se encuentra ese archivo con ese nombre","Atencion",2);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        if(!nombre.isEmpty())
+            abrir(nombre);
+        else
+            JOptionPane.showMessageDialog(null, "no se encuentra ese archivo con ese nombre","Atencion",2);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -854,6 +976,8 @@ public class evaInicial extends javax.swing.JDialog {
         }
         //</editor-fold>
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -875,6 +999,8 @@ public class evaInicial extends javax.swing.JDialog {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JComboBox jComboBox1;

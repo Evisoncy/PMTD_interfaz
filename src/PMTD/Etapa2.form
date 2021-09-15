@@ -42,7 +42,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="AN&#xc1;LISIS DEL PLAN DEL ELON SUPERIOR"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -59,7 +59,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="DETERMINACI&#xd3;N DE TAREAS"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -76,7 +76,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="EVALUACION DE LOS RECURSOS DISPONIBLES"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -93,7 +93,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="IDENTIFICACI&#xd3;N DE LIMITACIONES"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -110,7 +110,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="HECHOS CR&#xcd;TICOS Y DEARROLLO DE SUPOSICIONES"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -127,7 +127,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="DESARROLLO DE RICC INICIALES"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -144,7 +144,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value=" (CRM) "/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -161,7 +161,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="REVISI&#xd3;N DE LA SITUACI&#xd3;N"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -178,7 +178,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="DESARROLLAR LA MATRIZ DE SINCRONIZACI&#xd3;N DE IVR"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -195,7 +195,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="ACTUALIZACI&#xd3;N DEL PLAN DE EMPLEO DE TIEMPO"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -212,7 +212,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Desarrollar los temas y mensajes de informaci&#xf3;n"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -229,7 +229,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Desarrollo una propuesta del enunciado de la misi&#xf3;n"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -246,7 +246,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Desarrollar la intenci&#xf3;n inicial del comandante"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -263,7 +263,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Conducir la evaluacion inicial"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -280,7 +280,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Desarrollar la gu&#xed;a inicial de planeamiento"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
@@ -297,7 +297,7 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="FORMULACI&#xd3;N DEL PLAN IVR"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-          <Color id="Cursor Por defecto"/>
+          <Color id="Default Cursor"/>
         </Property>
         <Property name="horizontalTextPosition" type="int" value="0"/>
       </Properties>
