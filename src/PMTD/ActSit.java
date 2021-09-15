@@ -5,7 +5,15 @@
  */
 package PMTD;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
 import java.awt.Dimension;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
@@ -36,6 +44,9 @@ public class ActSit extends java.awt.Dialog {
         cmb.addItem("S6 - G6");
         cmb.addItem("S7 - G7");
         cmb.addItem("S8 - G8");
+        
+        txtLugar6.setText("");
+        jLabel22.setText("Fecha: Formato dd/mm/aaaa");
     }
 
     /**
@@ -120,10 +131,15 @@ public class ActSit extends java.awt.Dialog {
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
+
+        jPanel12.setBackground(new java.awt.Color(102, 153, 0));
+
         jLabel19.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel19.setText("Actualizar apreciacion de situación");
         jPanel12.add(jLabel19);
 
+        jPanel13.setBackground(new java.awt.Color(102, 153, 0));
         jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Encabezado"));
 
         jLabel20.setText("Unidad");
@@ -188,6 +204,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap())
         );
 
+        jPanel14.setBackground(new java.awt.Color(102, 153, 0));
         jPanel14.setBorder(javax.swing.BorderFactory.createTitledBorder("Area de interes"));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -250,6 +267,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel17.setBackground(new java.awt.Color(102, 153, 0));
         jPanel17.setBorder(javax.swing.BorderFactory.createTitledBorder("Características del area de operaciones"));
 
         jLabel43.setText("Condiciones metereologicas");
@@ -305,6 +323,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap())
         );
 
+        jPanel2.setBackground(new java.awt.Color(102, 153, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("c. Fuerzas enemigas"));
 
         jTextArea1.setColumns(20);
@@ -327,6 +346,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap())
         );
 
+        jPanel3.setBackground(new java.awt.Color(102, 153, 0));
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("d. Fuerzas amigas"));
 
         jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Recursos adicionales"));
@@ -557,6 +577,7 @@ public class ActSit extends java.awt.Dialog {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
+        jPanel8.setBackground(new java.awt.Color(102, 153, 0));
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder("e. Consideraciones civiles"));
 
         jTextArea8.setColumns(20);
@@ -775,11 +796,18 @@ public class ActSit extends java.awt.Dialog {
     }//GEN-LAST:event_jButton10ActionPerformed
 
     private void btnFin1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFin1ActionPerformed
-        // TODO add your handling code here:
+        NuloTodos();
+        try {
+            // TODO add your handling code here:
+            Generar("ApreciaciondeSituacion");
+            //va a modificar el documento
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(ActSit.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (DocumentException ex) {
+            Logger.getLogger(ActSit.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
-        //va a modificar el documento
-
-        JOptionPane.showMessageDialog(null, "Cambios guardados");
+        JOptionPane.showMessageDialog(null, "Cambios guardados, documento generado");
     }//GEN-LAST:event_btnFin1ActionPerformed
 
     /**
@@ -888,5 +916,215 @@ void quitaFila(JTable tabla){
     }
     tabla.setModel(tm);
 }
+
+public void Generar(String nombre) throws FileNotFoundException, DocumentException{
+        if(!(txtUnidad3.getText().isEmpty() || (txtLugar6.getText().isEmpty()) || (txtLugar7.getText().isEmpty()) )){
+            
+            FileOutputStream archivo = new FileOutputStream(nombre + ".pdf"); 
+            Document documento = new Document();
+            PdfWriter.getInstance(documento, archivo);
+            documento.open();
+            
+            Paragraph parrafo1 = new Paragraph("APRECIACION DE SITUACION\n\n");
+            parrafo1.setAlignment(1);
+            documento.add(parrafo1);
+            
+            Paragraph parrafo2 = new Paragraph(
+                    "Unidad: "+txtUnidad3.getText()+
+                    "\nLugar: "+txtLugar7.getText()+
+                    "\nFecha: "+txtLugar6.getText()+
+                    "\nApreciacion de situacion de: "+cmb.getSelectedItem());
+            //parrafo2.setAlignment(1);
+            documento.add(parrafo2);
+            
+            Paragraph parrafo3 = new Paragraph(
+                    "\n\ta. AREA DE INTERÉS" +
+                    "\n");
+            documento.add(parrafo3);
+            
+            for(int k=0; k<jTable1.getRowCount();k++){
+                Paragraph paraf = new Paragraph("");
+                if(jTable1.getValueAt(k,0)==null){
+                    jTable1.setValueAt("", k, 0);
+                }
+                if(jTable1.getValueAt(k,1)==null){
+                    jTable1.setValueAt("", k, 1);
+                }
+                    /*paraf = (
+                "  "+jTable1.getValueAt(k, 0) + " : "+
+                "  "+jTable1.getValueAt(k, 1)
+                );*/
+                paraf.add("  "+jTable1.getValueAt(k, 0) + " : "+
+                "  "+jTable1.getValueAt(k, 1));
+                
+                documento.add(paraf);
+            }
+            
+            Paragraph parrafo4 = new Paragraph(
+                    "\n\tb. CARACTERISTICAS DEL AREA DE COMUNICACIONES" +
+                    "\n"+
+                     "Condiciones metereologicas\n  "+ jTextArea3.getText()+"\n"+
+                     "Terreno\n  "+ jTextArea4.getText()+"\n"+
+                     "Otros hechos\n  " + jTextArea5.getText()+"\n");
+            documento.add(parrafo4);
+            
+            Paragraph parrafo5 = new Paragraph(
+                    "\n\tc. FUERZAS ENEMIGAS" +
+                    "\n"+
+                            jTextArea1.getText());
+            documento.add(parrafo5);
+            
+            
+            Paragraph parrafo6 = new Paragraph(
+                    "\n\td. FUERZAS AMIGAS" +
+                    "\n"+
+                     "Recursos disponibles\n  ");
+            documento.add(parrafo6);
+            
+            
+            for(int k=0; k<jTable3.getRowCount();k++){
+                Paragraph paraf = new Paragraph("");
+                if(jTable3.getValueAt(k,0)==null ){
+                    jTable3.setValueAt("", k, 0);
+                }
+                if(jTable3.getValueAt(k,1)==null){
+                    jTable3.setValueAt("", k, 1);
+                }
+                    paraf.add("  "+jTable3.getValueAt(k, 0) + " : "+
+                "  "+jTable3.getValueAt(k, 1));
+                
+                /*Paragraph paraf = new Paragraph(
+                "  "+jTable3.getValueAt(k, 0) + " : "+
+                "  "+jTable3.getValueAt(k, 1)
+                );*/
+                
+                documento.add(paraf);
+            }
+            
+            Paragraph parrafo7 = new Paragraph(
+                    "Capacidades disponibles\n");
+            documento.add(parrafo7);
+            
+            for(int k=0; k<jTable4.getRowCount();k++){
+                Paragraph paraf = new Paragraph("");
+                
+                if(jTable4.getValueAt(k,0)!=null ){
+                    paraf.add( "  "+jTable4.getValueAt(k, 0)+" ");
+                }
+
+                /*Paragraph paraf = new Paragraph(
+                "  "+jTable4.getValueAt(k, 0)+" "
+                );*/
+                documento.add(paraf);
+            }
+            
+            Paragraph parrafo8 = new Paragraph(
+                    "Recursos adicionales\n");
+            documento.add(parrafo8);
+            
+            Paragraph parrafo9 = new Paragraph(
+                    "Escalon superior\n");
+            documento.add(parrafo9);
+            
+            for(int k=0; k<jTable2.getRowCount();k++){
+                Paragraph paraf = new Paragraph("");
+                
+                if(jTable2.getValueAt(k,0)!=null ){
+                    paraf.add( "  "+jTable2.getValueAt(k, 0)+" ");
+                }
+                /*Paragraph paraf = new Paragraph(
+                "  "+jTable2.getValueAt(k, 0)+" "
+                );*/
+                documento.add(paraf);
+            }
+            
+            Paragraph parrafo10 = new Paragraph(
+                    "Unidades Vecinas\n");
+            documento.add(parrafo10);
+            for(int k=0; k<jTable2.getRowCount();k++){
+                Paragraph paraf = new Paragraph("");
+                
+                if(jTable2.getValueAt(k,1)!=null ){
+                    paraf.add( "  "+jTable2.getValueAt(k, 1)+" ");
+                }
+                
+                /*Paragraph paraf = new Paragraph(
+                "  "+jTable2.getValueAt(k, 1)+" "
+                );*/
+                documento.add(paraf);
+            }
+            
+            Paragraph parrafo11 = new Paragraph(
+                    "Otros\n");
+            documento.add(parrafo11);
+            for(int k=0; k<jTable2.getRowCount();k++){
+                Paragraph paraf = new Paragraph("");
+                
+                if(jTable2.getValueAt(k,2)!=null ){
+                    paraf.add( "  "+jTable2.getValueAt(k, 2)+" ");
+                }
+                /*Paragraph paraf = new Paragraph(
+                "  "+jTable2.getValueAt(k, 2)+" "
+                );*/
+                documento.add(paraf);
+            }
+            
+            Paragraph parrafo12 = new Paragraph(
+                    "Necesidades vs. capacidades\n  "+jTextArea2.getText());
+            documento.add(parrafo12);
+            
+            Paragraph parrafo13 = new Paragraph(
+                    "\n\te. CONSIDERACIONES CIVILES" +
+                    "\n");
+            documento.add(parrafo13);
+            
+            Paragraph parrafo14 = new Paragraph(
+                    "Factores políticos\n  "+jTextArea8.getText());
+            documento.add(parrafo14);
+            
+            Paragraph parrafo15 = new Paragraph(
+                    "Factores económicos\n  "+jTextArea9.getText());
+            documento.add(parrafo15);
+            
+            Paragraph parrafo16 = new Paragraph(
+                    "Factores sociologicos\n  "+jTextArea10.getText());
+            documento.add(parrafo16);
+            
+            Paragraph parrafo17 = new Paragraph(
+                    "Factores psicologicos\n  "+jTextArea11.getText());
+            documento.add(parrafo17);
+            
+            Paragraph parrafo18 = new Paragraph(
+                    "Infraestructura\n  "+jTextArea12.getText());
+            documento.add(parrafo18);
+           
+            documento.close();
+            JOptionPane.showMessageDialog(null, "El archivo pdf fue creado correctamente");
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Llenar los campos");    
+        }
+    }
+
+//-------------------------------------
+
+void Nulo(JTable jt){
+    for(int i=0; i<jt.getRowCount();i++){
+        for(int j=0; j<jt.getColumnCount();j++){
+            if(jt.getValueAt(i, j)==null){
+                jt.setValueAt("",i,j);
+            }
+        }
+    }
+}
+
+void NuloTodos(){
+    Nulo(jTable1);
+    Nulo(jTable2);
+    Nulo(jTable3);
+    Nulo(jTable4);
+}
+
+
 
 }
