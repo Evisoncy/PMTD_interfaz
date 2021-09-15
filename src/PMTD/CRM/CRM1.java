@@ -54,13 +54,13 @@ public class CRM1 extends javax.swing.JDialog {
             documento.add(parrafo);
             String probab=prob.getSelectedItem().toString();
             String impac =impacto.getSelectedItem().toString();
-            documento.add(new Paragraph("1. Función de combate: \n" + "    -" + funcion.getText() + "\n"));
-            documento.add(new Paragraph("2. Peligro identificado: \n" + "    -" + peligro.getText() + "\n"));
-            documento.add(new Paragraph("3. Factor posibilitante: \n" + "    -" + factor.getText() + "\n"));
-            documento.add(new Paragraph("4. Riesgo: \n" + "    -" + riesgo.getText() + "\n"));
-            documento.add(new Paragraph("5. Probabilidad: \n" + "    -" + probab + "\n"));
-            documento.add(new Paragraph("6. Impacto: \n" + "    -" + impac + "\n"));
-            documento.add(new Paragraph("7. Categoria del riesgo: \n" + "    -" + cat.getText() + "\n"));
+            documento.add(new Paragraph("1. Función de combate: \n" + "    " + funcion.getText() + "\n"));
+            documento.add(new Paragraph("2. Peligro identificado: \n" + "    " + peligro.getText() + "\n"));
+            documento.add(new Paragraph("3. Factor posibilitante: \n" + "    " + factor.getText() + "\n"));
+            documento.add(new Paragraph("4. Riesgo: \n" + "    " + riesgo.getText() + "\n"));
+            documento.add(new Paragraph("5. Probabilidad: \n" + "    " + probab + "\n"));
+            documento.add(new Paragraph("6. Impacto: \n" + "    " + impac + "\n"));
+            documento.add(new Paragraph("7. Categoria del riesgo: \n" + "    " + cat.getText() + "\n"));
           
             documento.close();
             JOptionPane.showMessageDialog(null, "El archivo pdf fue creado correctamente");

@@ -7,6 +7,7 @@ package PMTD;
 
 
 import PMTD.EValInicial.evaInicial;
+import Visual.MostrarPDF;
 import java.awt.Menu;
 
 /**
@@ -61,7 +62,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton1);
-        jButton1.setBounds(190, 100, 350, 25);
+        jButton1.setBounds(350, 100, 320, 25);
 
         jButton3.setText("REUNIR HERRAMIENTAS");
         jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -72,7 +73,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton3);
-        jButton3.setBounds(190, 150, 350, 25);
+        jButton3.setBounds(350, 150, 320, 25);
 
         jButton4.setText("ACTUALIZAR APRECIACIONES DE SITUACIÓN");
         jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -83,7 +84,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton4);
-        jButton4.setBounds(190, 200, 350, 25);
+        jButton4.setBounds(350, 200, 320, 25);
 
         jButton5.setText("ESTABLECER ENLACES");
         jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -94,7 +95,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton5);
-        jButton5.setBounds(190, 250, 350, 25);
+        jButton5.setBounds(350, 250, 320, 25);
 
         jButton6.setText("CONDUCIR LA EVALUACION INICIAL");
         jButton6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -105,7 +106,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton6);
-        jButton6.setBounds(190, 300, 350, 25);
+        jButton6.setBounds(350, 300, 320, 25);
 
         jButton2.setText("GUIA DE INICIACIÓN");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +115,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton2);
-        jButton2.setBounds(190, 350, 350, 23);
+        jButton2.setBounds(350, 350, 320, 24);
 
         jButton7.setText("ORDEN PREPARATORIA N°1");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +124,7 @@ public class Etapa1 extends javax.swing.JPanel {
             }
         });
         add(jButton7);
-        jButton7.setBounds(190, 400, 350, 23);
+        jButton7.setBounds(350, 400, 320, 24);
 
         jPanel1.setLayout(new java.awt.BorderLayout());
 
@@ -137,9 +138,9 @@ public class Etapa1 extends javax.swing.JPanel {
         add(jPanel1);
         jPanel1.setBounds(0, 0, 730, 50);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_claro.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fondo_inicio.png"))); // NOI18N
         add(jLabel1);
-        jLabel1.setBounds(0, 0, 730, 490);
+        jLabel1.setBounds(0, 50, 340, 440);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -152,9 +153,12 @@ public class Etapa1 extends javax.swing.JPanel {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        ReunirHe r = new ReunirHe(null,true);
+        /*ReunirHe r = new ReunirHe(null,true);
         r.setLocationRelativeTo(null);
-        r.setVisible(true);
+        r.setVisible(true);*/
+        
+        MostrarPDF f = new MostrarPDF();
+        f.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

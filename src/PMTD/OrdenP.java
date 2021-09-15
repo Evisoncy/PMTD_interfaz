@@ -44,11 +44,11 @@ public class OrdenP extends javax.swing.JDialog {
             parrafo.setAlignment(1);
             documento.add(parrafo);
             
-            documento.add(new Paragraph("1. Tipo de operacion a realizar: \n" + "    -" + operacion.getText() + "\n"));
+            documento.add(new Paragraph("1. Tipo de operacion a realizar: \n" + "    " + operacion.getText() + "\n"));
             documento.add(new Paragraph("2. Area de operaciones: \n" + "    -" + Aopera.getText() + "\n"));
-            documento.add(new Paragraph("3. Fecha de inicio de operacion: \n" + "    -" + fecha.getText() + "\n"));
+            documento.add(new Paragraph("3. Fecha de inicio de operacion: \n" + "    " + fecha.getText() + "\n"));
             documento.add(new Paragraph("4. Movimientos a realizar: \n" + "    -" + mov.getText() + "\n"));
-            documento.add(new Paragraph("5. Actividades IVR por realizar: \n" + "    -" + act.getText() + "\n"));
+            documento.add(new Paragraph("5. Actividades IVR por realizar: \n" + "    " + act.getText() + "\n"));
 
             //documento.add(new Paragraph("asdsad: " + xd))
             documento.close();

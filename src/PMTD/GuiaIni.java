@@ -44,15 +44,15 @@ public class GuiaIni extends javax.swing.JDialog {
             parrafo.setAlignment(1);
             documento.add(parrafo);
             String id=IniciarDiseño.getSelectedItem().toString();
-            documento.add(new Paragraph("1. Asignación del tiempo inicial: \n" + "    -" + time.getText() + "\n"));
-            documento.add(new Paragraph("2. Método de planeamiento: \n" + "    -" + metodo.getSelectedItem().toString() + "\n"));
-            documento.add(new Paragraph("3. Iniciar el diseño: \n" + "    -" + id + "\n"));
-            documento.add(new Paragraph("4. Coordinaciones por realizar: \n" + "    -" + Coord.getText() + "\n"));
-            documento.add(new Paragraph("5. Movimientos autorizados de reconocimiento y vigilancia: \n" + "    -" + Mov.getText() + "\n"));
+            documento.add(new Paragraph("1. Asignación del tiempo inicial: \n" + "    " + time.getText() + "\n"));
+            documento.add(new Paragraph("2. Método de planeamiento: \n" + "    " + metodo.getSelectedItem().toString() + "\n"));
+            documento.add(new Paragraph("3. Iniciar el diseño: \n" + "    " + id + "\n"));
+            documento.add(new Paragraph("4. Coordinaciones por realizar: \n" + "    " + Coord.getText() + "\n"));
+            documento.add(new Paragraph("5. Movimientos autorizados de reconocimiento y vigilancia: \n" + "    " + Mov.getText() + "\n"));
             documento.add(new Paragraph("6. Trabajos o tareas adicionales para el EM: \n" + "    -" + Trab.getText() + "\n"));
-            documento.add(new Paragraph("7. Requerimientos de información: \n" + "    -" + Req.getText() + "\n"));
-            documento.add(new Paragraph("8. Lugar de planeamiento: \n" + "    -" + lugar.getText() + "\n"));
-            documento.add(new Paragraph("9. Fecha de planeamiento: \n" + "    -" + fecha.getText() + "\n"));
+            documento.add(new Paragraph("7. Requerimientos de información: \n" + "    " + Req.getText() + "\n"));
+            documento.add(new Paragraph("8. Lugar de planeamiento: \n" + "    " + lugar.getText() + "\n"));
+            documento.add(new Paragraph("9. Fecha de planeamiento: \n" + "    " + fecha.getText() + "\n"));
             //documento.add(new Paragraph("asdsad: " + xd))
             documento.close();
             JOptionPane.showMessageDialog(null, "El archivo pdf fue creado correctamente");

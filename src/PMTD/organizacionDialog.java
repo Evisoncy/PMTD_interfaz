@@ -324,7 +324,7 @@ public class organizacionDialog extends java.awt.Dialog {
             .addGroup(jPanelCombateLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 493, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel5.add(jPanelCombate, "card2");
@@ -353,15 +353,15 @@ public class organizacionDialog extends java.awt.Dialog {
         jPanel3.add(jTextField2);
         jTextField2.setBounds(190, 80, 150, 24);
 
-        jLabel4.setText("G5");
+        jLabel4.setText("S5/ G5");
         jPanel3.add(jLabel4);
         jLabel4.setBounds(190, 200, 140, 16);
 
-        jLabel5.setText("G3");
+        jLabel5.setText("S3/ G3");
         jPanel3.add(jLabel5);
         jLabel5.setBounds(370, 140, 120, 16);
 
-        jLabel6.setText("G4");
+        jLabel6.setText("S4/ G4");
         jPanel3.add(jLabel6);
         jLabel6.setBounds(20, 200, 80, 16);
         jPanel3.add(jTextField3);
@@ -385,19 +385,19 @@ public class organizacionDialog extends java.awt.Dialog {
         jPanel3.add(jTextField6);
         jTextField6.setBounds(370, 220, 150, 24);
 
-        jLabel7.setText("G6");
+        jLabel7.setText("S6/ G6");
         jPanel3.add(jLabel7);
         jLabel7.setBounds(370, 200, 120, 16);
         jPanel3.add(jTextField7);
         jTextField7.setBounds(20, 280, 150, 24);
 
-        jLabel8.setText("G7");
+        jLabel8.setText("S7/ G7");
         jPanel3.add(jLabel8);
         jLabel8.setBounds(20, 260, 80, 16);
         jPanel3.add(jTextField8);
         jTextField8.setBounds(190, 280, 150, 24);
 
-        jLabel9.setText("G8");
+        jLabel9.setText("S8/ G8");
         jPanel3.add(jLabel9);
         jLabel9.setBounds(190, 260, 140, 16);
 
@@ -409,13 +409,13 @@ public class organizacionDialog extends java.awt.Dialog {
         jPanel3.add(jTextField17);
         jTextField17.setBounds(20, 160, 150, 24);
 
-        jLabel18.setText("G1");
+        jLabel18.setText("S1/ G1");
         jPanel3.add(jLabel18);
         jLabel18.setBounds(20, 140, 120, 16);
         jPanel3.add(jTextField18);
         jTextField18.setBounds(190, 160, 150, 24);
 
-        jLabel19.setText("G2");
+        jLabel19.setText("S2/ G2");
         jPanel3.add(jLabel19);
         jLabel19.setBounds(190, 140, 140, 16);
 
@@ -433,7 +433,7 @@ public class organizacionDialog extends java.awt.Dialog {
             .addGroup(jPanelCoordinacionLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(55, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         jPanel5.add(jPanelCoordinacion, "card3");
@@ -458,7 +458,7 @@ public class organizacionDialog extends java.awt.Dialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 505, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
