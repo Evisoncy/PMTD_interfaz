@@ -5,6 +5,14 @@
  */
 package PMTD.EValInicial;
 
+import com.itextpdf.text.Document;
+import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.pdf.PdfWriter;
+import java.awt.Desktop;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -30,6 +38,7 @@ public class EvalRiesgo extends javax.swing.JDialog {
         this.setLocationRelativeTo(null);
     }
 
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -46,6 +55,8 @@ public class EvalRiesgo extends javax.swing.JDialog {
         cboCurso = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         btnProcesar = new javax.swing.JButton();
+        resp = new java.awt.TextField();
+        label1 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -55,7 +66,7 @@ public class EvalRiesgo extends javax.swing.JDialog {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("CATEGORIA DEL RIESGO");
 
-        jLabel1.setText("Probabilidad");
+        jLabel1.setText("PROBABILIDAD");
 
         cboProfesor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "frecuente", "probable", "ocasional", "rara-vez", "improbable" }));
         cboProfesor.addActionListener(new java.awt.event.ActionListener() {
@@ -71,7 +82,7 @@ public class EvalRiesgo extends javax.swing.JDialog {
             }
         });
 
-        jLabel2.setText("Impacto");
+        jLabel2.setText("IMPACTO");
 
         btnProcesar.setText("Procesar");
         btnProcesar.addActionListener(new java.awt.event.ActionListener() {
@@ -79,6 +90,8 @@ public class EvalRiesgo extends javax.swing.JDialog {
                 btnProcesarActionPerformed(evt);
             }
         });
+
+        label1.setText("RESULTADO:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -100,8 +113,10 @@ public class EvalRiesgo extends javax.swing.JDialog {
                         .addComponent(btnProcesar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(79, 79, 79)
-                        .addComponent(jLabel9)))
-                .addContainerGap(42, Short.MAX_VALUE))
+                        .addComponent(jLabel9))
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(26, Short.MAX_VALUE))
+            .addComponent(resp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,7 +133,11 @@ public class EvalRiesgo extends javax.swing.JDialog {
                     .addComponent(cboCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(54, 54, 54)
                 .addComponent(btnProcesar)
-                .addGap(82, 82, 82))
+                .addGap(5, 5, 5)
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(resp, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -174,6 +193,7 @@ public class EvalRiesgo extends javax.swing.JDialog {
         try {
             String msj = fv.getFactSlot("mensaje").toString();
             JOptionPane.showMessageDialog(null, msj);
+            resp.setText(msj);
             clips.reset();
         } catch (Exception ex) {
             Logger.getLogger(EvalRiesgo.class.getName()).log(Level.SEVERE, null, ex);
@@ -231,5 +251,7 @@ public class EvalRiesgo extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private java.awt.Label label1;
+    private java.awt.TextField resp;
     // End of variables declaration//GEN-END:variables
 }

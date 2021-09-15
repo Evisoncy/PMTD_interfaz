@@ -40,15 +40,15 @@ public class OrdenP extends javax.swing.JDialog {
             PdfWriter.getInstance(documento, archivo);
             documento.open();
             
-            Paragraph parrafo = new Paragraph("ORDEN PREPARATORIA N°1 n");
+            Paragraph parrafo = new Paragraph("ORDEN PREPARATORIA N°1 \n\n");
             parrafo.setAlignment(1);
             documento.add(parrafo);
             
-            documento.add(new Paragraph("Tipo de operacion a realizar: \n" + operacion.getText()));
-            documento.add(new Paragraph("Area de operaciones: \n" + Aopera.getText()));
-            documento.add(new Paragraph("Fecha de inicio de operacion: \n" + fecha.getText()));
-            documento.add(new Paragraph("Movimientos a realizar: \n" + mov.getText()));
-            documento.add(new Paragraph("Actividades IVR por realizar: \n" + act.getText()));
+            documento.add(new Paragraph("1. Tipo de operacion a realizar: \n" + "    -" + operacion.getText() + "\n"));
+            documento.add(new Paragraph("2. Area de operaciones: \n" + "    -" + Aopera.getText() + "\n"));
+            documento.add(new Paragraph("3. Fecha de inicio de operacion: \n" + "    -" + fecha.getText() + "\n"));
+            documento.add(new Paragraph("4. Movimientos a realizar: \n" + "    -" + mov.getText() + "\n"));
+            documento.add(new Paragraph("5. Actividades IVR por realizar: \n" + "    -" + act.getText() + "\n"));
 
             //documento.add(new Paragraph("asdsad: " + xd))
             documento.close();
@@ -95,7 +95,6 @@ public class OrdenP extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -138,31 +137,31 @@ public class OrdenP extends javax.swing.JDialog {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel5))
+                .addGap(40, 40, 40)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(jLabel9))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel5))
-                        .addGap(40, 40, 40)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(operacion)
-                            .addComponent(jScrollPane2)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(fecha)
-                            .addComponent(Aopera))))
+                    .addComponent(operacion)
+                    .addComponent(jScrollPane2)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(fecha)
+                    .addComponent(Aopera))
                 .addGap(40, 40, 40))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(jButton1)
-                .addGap(45, 45, 45)
-                .addComponent(jButton2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(jButton1)
+                        .addGap(45, 45, 45)
+                        .addComponent(jButton2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(108, 108, 108)
+                        .addComponent(jLabel9)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(

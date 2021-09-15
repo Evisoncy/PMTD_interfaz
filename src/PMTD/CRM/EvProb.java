@@ -60,10 +60,11 @@ public class EvProb extends javax.swing.JDialog {
         btnContinuar = new javax.swing.JButton();
         rbtnNo = new javax.swing.JRadioButton();
         jLabel9 = new javax.swing.JLabel();
+        res = new java.awt.TextField();
+        label1 = new java.awt.Label();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         lblRespuesta.setText("jLabel1");
@@ -91,26 +92,37 @@ public class EvProb extends javax.swing.JDialog {
         jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel9.setText("EVALUACIÓN DEL NIVEL DE PROBABILIDAD");
 
+        res.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resActionPerformed(evt);
+            }
+        });
+
+        label1.setText("RESULTADO");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(47, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(35, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addGap(42, 42, 42))
+                        .addComponent(rbtnSi)
+                        .addGap(92, 92, 92)
+                        .addComponent(rbtnNo)
+                        .addGap(139, 139, 139))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(rbtnSi)
-                                .addGap(92, 92, 92)
-                                .addComponent(rbtnNo))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(41, 41, 41)
-                                .addComponent(btnContinuar)))
-                        .addGap(139, 139, 139))))
+                            .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel9)
+                                .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(42, 42, 42))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(182, 182, 182)
+                .addComponent(btnContinuar)
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(98, 98, 98)
@@ -130,7 +142,11 @@ public class EvProb extends javax.swing.JDialog {
                     .addComponent(rbtnNo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnContinuar)
-                .addGap(84, 84, 84))
+                .addGap(12, 12, 12)
+                .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(84, 84, 84)
@@ -194,8 +210,9 @@ public class EvProb extends javax.swing.JDialog {
                     lblRespuesta.setText("Desea volver a intentarlo?");
 
                     JOptionPane.showMessageDialog(null,valor , "Mensaje",JOptionPane.INFORMATION_MESSAGE);
+                    res.setText(valor);
                 }else{
-                    System.exit(0);
+                    //System.exit(0);
                 }
 
             }
@@ -204,6 +221,10 @@ public class EvProb extends javax.swing.JDialog {
             Logger.getLogger(EvProb.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_btnContinuarActionPerformed
+
+    private void resActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_resActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,9 +273,11 @@ public class EvProb extends javax.swing.JDialog {
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private java.awt.Label label1;
     private javax.swing.JLabel lblPregunta;
     private javax.swing.JLabel lblRespuesta;
     private javax.swing.JRadioButton rbtnNo;
     private javax.swing.JRadioButton rbtnSi;
+    private java.awt.TextField res;
     // End of variables declaration//GEN-END:variables
 }

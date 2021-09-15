@@ -87,7 +87,6 @@ public class Establecer_enlace1 extends javax.swing.JDialog {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 0));
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
@@ -148,7 +147,7 @@ public class Establecer_enlace1 extends javax.swing.JDialog {
             }
         });
 
-        jTable2.setBackground(new java.awt.Color(51, 153, 0));
+        jTable2.setAutoCreateRowSorter(true);
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},

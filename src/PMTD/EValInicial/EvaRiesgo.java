@@ -53,6 +53,7 @@ public class EvaRiesgo extends javax.swing.JDialog {
         cboCurso = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         btnProcesar = new javax.swing.JButton();
+        res = new java.awt.TextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -107,7 +108,10 @@ public class EvaRiesgo extends javax.swing.JDialog {
                         .addComponent(btnProcesar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(79, 79, 79)
-                        .addComponent(jLabel9)))
+                        .addComponent(jLabel9))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -125,7 +129,9 @@ public class EvaRiesgo extends javax.swing.JDialog {
                     .addComponent(cboCurso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(54, 54, 54)
                 .addComponent(btnProcesar)
-                .addGap(82, 82, 82))
+                .addGap(20, 20, 20)
+                .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(22, 22, 22))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -177,6 +183,7 @@ public class EvaRiesgo extends javax.swing.JDialog {
         try {
             String msj = fv.getFactSlot("mensaje").toString();
             JOptionPane.showMessageDialog(null, msj);
+           
             //resultado=jTextField1.;
             clips.reset();
         } catch (Exception ex) {
@@ -235,5 +242,6 @@ public class EvaRiesgo extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private java.awt.TextField res;
     // End of variables declaration//GEN-END:variables
 }
