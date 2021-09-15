@@ -138,9 +138,9 @@ public class Etapa2 extends javax.swing.JPanel {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         //Etapa1 dialo2 = new JDialog(new requerimientos(),true);
-        requerimientoDialog re2 = new requerimientoDialog(null,true);
-        re2.setLocationRelativeTo(null);
-        re2.setVisible(true);
+        PlanElonSup PES = new PlanElonSup(null,true);
+        PES.setLocationRelativeTo(null);
+        PES.setVisible(true);
 
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -152,13 +152,16 @@ public class Etapa2 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        tarea t = new tarea();
-        t.setVisible(true);
+        Desarrollar_seleccion DS = new Desarrollar_seleccion(null,true);
+        DS.setLocationRelativeTo(null);
+        DS.setVisible(true);
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
+        limitacionesDialog LD = new limitacionesDialog(null,true);
+        LD.setLocationRelativeTo(null);
+        LD.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -174,7 +177,9 @@ public class Etapa2 extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
+        RevSituacion RS = new RevSituacion(null,true);
+        RS.setLocationRelativeTo(null);
+        RS.setVisible(true);
     }//GEN-LAST:event_jButton9ActionPerformed
 
 
